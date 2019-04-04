@@ -1,0 +1,63 @@
+UPDATES from v0:
+
+Version 1 of the L2SWBM historical record incorporates a couple of changes:
+
+1.) Regarding the prior uncertainty and bias in the channel flow and diversion estimates, we incorporate more
+precise expert opinion, based off of historical seasonal data. Some of that opinion is derived from Bruxer 2010 (http://hdl.handle.net/11375/9907), while the rest was developed from informal conversation between Bruxer and Steinschneider (Cornell University). The proc and plotter files have been updated as a result.
+
+2.) St. Clair is given more equal treatment in terms of seasonal process error and bias of its Net Basin Supplies.
+
+These changes are summarized in a block of code in the proc* file:
+
+*** Begin Block ***
+
+for (i in 1:12){
+	superiorProcError[i] ~ dnorm(0,0.01)
+	miHuronProcError[i] ~ dnorm(0,0.01)
+	clairProcError[i] ~ dnorm(0,0.053) # For CMS equivalent
+	erieProcError[i] ~ dnorm(0,0.01)
+	ontarioProcError[i] ~ dnorm(0,0.01)
+	
+	#ySuperiorOutflow1Bias[i] ~ dnorm(0,0.00007) Commented out
+	#ySuperiorOutflow2Bias[i] ~ dnorm(0,0.00007) Was the previous setup
+	#ySuperiorDiversion1Bias[i] ~ dnorm(0,0.03) Based off a rough reading
+	#yMiHuronOutflow1Bias[i] ~ dnorm(0,0.00002) of Bruxer 2010
+	#yMiHuronOutflow2Bias[i] ~ dnorm(0,0.00002)
+	#yMiHuronDiversion1Bias[i] ~ dnorm(0,0.03)
+	#yClairOutflow1Bias[i] ~ dnorm(0,0.00002)
+	#yClairOutflow2Bias[i] ~ dnorm(0,0.00002)
+	#yErieOutflow1Bias[i] ~ dnorm(0,0.00007)
+	#yErieDiversion1Bias[i] ~ dnorm(0,0.03)
+	#yOntarioOutflow1Bias[i] ~ dnorm(0,0.00007)	
+	
+	# Now bias has some seasonal variation in its variability
+	ySuperiorOutflow1Bias[i] ~ dnorm(0,ySuperiorOutflow1BiasPrec[i])
+	ySuperiorOutflow2Bias[i] ~ dnorm(0,ySuperiorOutflow2BiasPrec[i])
+	ySuperiorDiversion1Bias[i] ~ dnorm(0,ySuperiorDiversion1BiasPrec[i])
+	yMiHuronOutflow1Bias[i] ~ dnorm(0,yMiHuronOutflow1BiasPrec[i])
+	yMiHuronOutflow2Bias[i] ~ dnorm(0,yMiHuronOutflow2BiasPrec[i])
+	yMiHuronDiversion1Bias[i] ~ dnorm(0,yMiHuronDiversion1BiasPrec[i])
+	yClairOutflow1Bias[i] ~ dnorm(0,yClairOutflow1BiasPrec[i])
+	yClairOutflow2Bias[i] ~ dnorm(0,yClairOutflow2BiasPrec[i])
+	yErieOutflow1Bias[i] ~ dnorm(0,yErieOutflow1BiasPrec[i])
+	yErieDiversion1Bias[i] ~ dnorm(0,yErieDiversion1BiasPrec[i])
+	yOntarioOutflow1Bias[i] ~ dnorm(0,yOntarioOutflow1BiasPrec[i])
+
+*** End block ***
+	
+*BiasPrec are calculated as follows:
+
+(ySuperiorOutflow1BiasPrec = 1/(rep(0.02,12)*superiorOutflowPriorMean)^2)
+(ySuperiorOutflow2BiasPrec = 1/(rep(0.02,12)*superiorOutflowPriorMean)^2)
+(ySuperiorDiversion1BiasPrec = 1/(rep(0.04,12)*superiorDiversionPriorMean)^2)
+(yMiHuronOutflow1BiasPrec = 1/(rep(0.03,12)*miHuronOutflowPriorMean)^2)
+(yMiHuronOutflow2BiasPrec = 1/(rep(0.03,12)*miHuronOutflowPriorMean)^2)
+(yMiHuronDiversion1BiasPrec = 1/(rep(0.04,12)*miHuronDiversionPriorMean)^2)
+(yClairOutflow1BiasPrec = 1/(rep(0.03,12)*clairOutflowPriorMean)^2)
+(yClairOutflow2BiasPrec = 1/(rep(0.03,12)*clairOutflowPriorMean)^2)
+(yErieOutflow1BiasPrec = 1/(rep(0.02,12)*erieOutflowPriorMean)^2)
+(yErieDiversion1BiasPrec = 1/(rep(0.04,12)*erieDiversionPriorMean)^2)
+(yOntarioOutflow1BiasPrec = 1/(rep(0.02,12)*ontarioOutflowPriorMean)^2)
+
+Where *PriorMean are calculated from historical observations. Each is a vector of 12 values for each month. The final precision values are based off of a percentage (2-4%) of those historical values, as informed by Bruxer and Steinschnieder.
+
