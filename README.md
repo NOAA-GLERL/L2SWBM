@@ -1,6 +1,6 @@
 ## Large Lake Statistical Water Balance Model (L2SWBM) - Version 1
 
-]Water balance models are often employed to improve understanding of drivers of change in regional hydrologic 
+Water balance models are often employed to improve understanding of drivers of change in regional hydrologic 
 cycles. Most of these models, however, are physically-based, and few employ state-of-the-art statistical methods
 to reconcile measurement uncertainty and bias.
 
