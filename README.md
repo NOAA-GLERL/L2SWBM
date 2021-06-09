@@ -49,6 +49,22 @@ largest lake system. Scientific Data 7, 276. https://doi.org/10.1038/s41597-020-
 Do, Hong X., J.P. SMITH, L.M. Fry and A.D. Gronewold (2020) Monthly water balance estimates for the Laurentian Great Lakes from 1950 
 to 2019 (v1.1).  Deep Blue, University of Michigan, Ann Arbor, MI. https://doi.org/10.7302/tx97-nn12
 
+## Acknowledgements
+
+Drew Gronewold, Associate Professor at the University of Michigan's School for Environment and Sustainability, initiated model
+development.
+
+We thank Song Qian, Yves Atchade, Kerby Shedden, Edward Ionides, Vincent Fortin, Bryan Tolson, and Craig Stow for helpful discussions
+on Bayesian inference and alternative formulations of our water balance model. Jacob Bruxer, Frank Seglenieks, Tim Hunter, and Lauren
+Fry provided expert opinions and water balance data. Nicole Rice provided graphical and editorial support.
+
+Funding was provided by the International Joint Commission (IJC) International Watersheds Initiative (IWI) to NOAA and the Cooperative
+Institute for Great Lakes Research (CIGLR) through a NOAA Cooperative Agreement with the University of Michigan (NA12OAR4320071);
+many thanks to Wendy Leger and Mike Shantz.
+
+The use of product names, commercial and otherwise, in this paper does not imply endorsement by NOAA, NOAA-GLERL, CIGLR, or any other
+contributing agency or organization.
+
 ## NOAA Disclaimer 
 
 This repository is a scientific product and is not official communication of the National Oceanic and
