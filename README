@@ -1,3 +1,9 @@
+This code was developed for research purposes, the operational version of the code is maintained by the
+Coordinating Committee on Great Lakes Basic Hydraulic and Hydrologic Data and can be accessed here:
+
+https://github.com/cc-hydrosub/L2SWBM
+
+
 This repository is a scientific product and is not official communication of the National Oceanic and
 Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is
 provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of
@@ -8,4 +14,4 @@ favoring by the Department of Commerce. The Department of Commerce seal and logo
 DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by
 DOC or the United States Government.
 
-The gold copy of the code resides at the following NOAA-GLERL website: https://www.glerl.noaa.gov/data/WaterBalanceModel/
+Questions about this code can be sent to NOAA-GLERL at oar.glerl.data@noaa.gov.
