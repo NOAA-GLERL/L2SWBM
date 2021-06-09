@@ -1,12 +1,13 @@
-## About
+## Large Lake Statistical Water Balance Model (L2SWBM) - Version 1
 
-Water balance models are often employed to improve understanding of drivers of change in regional hydrologic 
+]Water balance models are often employed to improve understanding of drivers of change in regional hydrologic 
 cycles. Most of these models, however, are physically-based, and few employ state-of-the-art statistical methods
 to reconcile measurement uncertainty and bias.
 
-Starting in 2015, NOAA-GLERL, along with its partners at CIGLR, began developing a water balance model under
-a Bayesian Markov chain Monte Carlo framework. Through this model, we generate new estimates of monthly runoff,
-over-lake evaporation, over-lake precipitation, and connecting channel flows for each of the Great Lakes. The
+Starting in 2015, NOAA Great Lakes Environmental Research Laboratory (GLERL), along with its partners at the
+University of Michigan Cooperative Institute for Great Lakes Research (CIGLR), began developing a water balance
+model under a Bayesian Markov chain Monte Carlo framework. Through this model, we generate new estimates of monthly
+runoff, over-lake evaporation, over-lake precipitation, and connecting channel flows for each of the Great Lakes. The
 new model reconciles discrepancies between model and measurement-based estimates of each component while
 closing the Laurentian Great Lakes water balance.
 
@@ -16,6 +17,19 @@ Great Lakes water balance. The project will help in resolving the regional water
 inter-annual time scales and represents an important stepping stone towards addressing a long-standing need in
 the Great Lakes for clear and defensible differentiation between hydrological, climatological, geological, and
 anthropogenic drivers behind seasonal and long-term changes in Laurentian Great Lakes water levels.
+
+To run these models, you will need to do the following:
+
+- Visit the JAGS Sourceforge repository and download JAGS for your computer: 
+https://sourceforge.net/projects/mcmc-jags/files/JAGS/
+
+- Download the R statistical programming environment
+https://cran.r-project.org/
+
+- Open R, and enter the command "install.packages(c('rjags'))", select your mirror, and install locally if necessary
+
+
+## Operational Code
 
 The code available here was developed for research purposes, the operational version of the code is maintained by the
 Coordinating Committee on Great Lakes Basic Hydraulic and Hydrologic Data and can be accessed here:
