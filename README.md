@@ -1,4 +1,4 @@
-## Large Lake Statistical Water Balance Model (L2SWBM) - Version 1
+## Large Lake Statistical Water Balance Model (L2SWBM) - Development Version
 
 Water balance models are often employed to improve understanding of drivers of change in regional hydrologic 
 cycles. Most of these models, however, are physically-based, and few employ state-of-the-art statistical methods
@@ -71,6 +71,10 @@ Additionally, we compare inferred channel outflows' uncertainty to the estimated
 
 Model code, with documentation contained within the README.txt. Changes from previous versions are documented in the CHANGES_vA_vB.txt file, where A is the previous, and B is the downloaded version.
 
+## Contact Info
+
+Questions about this code can be sent to NOAA-GLERL at oar.glerl.data@noaa.gov.
+
 ## Operational Code
 
 The code available here was developed for research purposes, the operational version of the code is maintained by the
@@ -78,9 +82,11 @@ Coordinating Committee on Great Lakes Basic Hydraulic and Hydrologic Data and ca
 
 https://github.com/cc-hydrosub/L2SWBM
 
-## Contact Info
+## Research Code
 
-Questions about this code can be sent to NOAA-GLERL at oar.glerl.data@noaa.gov.
+This model is being used for research by Dr. Andrew Gronewold at the University of Michigan.  Please see the most recent publication here: https://doi.org/10.1038/s41597-020-00613-z
+
+Access the research version of the code and the 1950-2019 simulations here: https://doi.org/10.7302/tx97-nn12 
 
 ## References
 
