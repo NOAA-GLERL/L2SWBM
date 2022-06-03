@@ -11,8 +11,8 @@ runoff, over-lake evaporation, over-lake precipitation, and connecting channel f
 new model reconciles discrepancies between model and measurement-based estimates of each component while
 closing the Laurentian Great Lakes water balance.
 
-In 2017, funding from the International Joint Commission - through their International Watersheds Initiative
-- was received to use the model in generating a new, balanced historical (1950 - 2015) record of the Laurentian
+In 2017, funding from the International Joint Commission - through their International Watersheds Initiative was
+received to use the model in generating a new, balanced historical (1950 - 2015) record of the Laurentian
 Great Lakes water balance. The project will help in resolving the regional water budget across monthly and
 inter-annual time scales and represents an important stepping stone towards addressing a long-standing need in
 the Great Lakes for clear and defensible differentiation between hydrological, climatological, geological, and
