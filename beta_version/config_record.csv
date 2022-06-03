@@ -1,0 +1,27 @@
+L2SWBM CONFIGURATION,
+,
+"Notes from developer (DO NOT ADD MORE, PLEASE ASK):",
+"For rolling window, do 6 months or more",
+"For picking NBS component models to input into the L2SWBM, use zeros and ones separated by a space, correspond to the models below",
+,
+NBS Component models available as of 6/16/2017:,
+,
+"Precip: GLM-HMD, GLM-HMD Provisional, USACE AHPS, ECCC-WCPS, ECCC-CaPA, NWS-MPE, Historical Coordinated, USACE-Thiessen, CaPA-Proto, MPE-Hist, CaPA-Hist, MPECaPA-Hist",
+"Evap: GLM-HMD, GLM-HMD Provisional, USACE AHPS, ECCC-WCPS, GEM-Proto",
+"Runoff: GLM-HMD, GLM-HMD Provisional, USACE AHPS, ECCC-WCPS, WATFLOOD, GEM-Proto",
+,
+,Value
+Analysis Start Year,1950
+Analysis Start Month,1
+Analysis End Year,2015
+Analysis End Month,12
+Prior Start Year,1950
+Prior Start Month,1
+Prior End Year,2015
+Prior End Month,12
+Rolling Window,6
+MCMC Iterations,2000
+Precip Inputs,1 0 1 0 1 0 1 0 1 0 0 0
+Evap Inputs,1 0 1 0 1
+Runoff Inputs,1 0 1 0 0 1
+Model Suffix,Insert_Unspaced_Descriptive_Suffix_Here
